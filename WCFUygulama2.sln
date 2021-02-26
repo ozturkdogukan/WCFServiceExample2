@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFUygulama2.Data", "WCFUygulama2.Data\WCFUygulama2.Data.csproj", "{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F20327D-30D2-468B-9A1B-D3041F882115}
+	EndGlobalSection
+EndGlobal
