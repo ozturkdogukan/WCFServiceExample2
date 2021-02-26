@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2AAE5FA-7E46-40BE-BD44-FEDF648A7CDD}</ProjectGuid>
+    <ProjectGuid>{347EF53A-E3A0-4C0A-A2A6-DFF3B3CDFEF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WCFUygulama2.Data</RootNamespace>
-    <AssemblyName>WCFUygulama2.Data</AssemblyName>
+    <RootNamespace>WCFUygulama2.DataAccess</RootNamespace>
+    <AssemblyName>WCFUygulama2.DataAccess</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -74,7 +74,6 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -85,65 +84,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\buyhistory.cs">
-      <DependentUpon>tablolar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\customer.cs">
-      <DependentUpon>tablolar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\log.cs">
-      <DependentUpon>tablolar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\product.cs">
-      <DependentUpon>tablolar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\tablolar.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablolar.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\tablolar.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablolar.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\tablolar.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>tablolar.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DTO\BuyHistoryDto.cs" />
-    <Compile Include="DTO\CustomerDto.cs" />
-    <Compile Include="DTO\ProductDto.cs" />
-    <Compile Include="DTO\SearchDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Database\tablolar.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>tablolar.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Database\tablolar.edmx.diagram">
-      <DependentUpon>tablolar.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Database\tablolar.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>tablolar.edmx</DependentUpon>
-      <LastGenOutput>tablolar.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database\tablolar.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>tablolar.edmx</DependentUpon>
-      <LastGenOutput>tablolar.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <ProjectReference Include="..\WCFUygulama2.Data\WCFUygulama2.Data.csproj">
+      <Project>{c2aae5fa-7e46-40be-bd44-fedf648a7cdd}</Project>
+      <Name>WCFUygulama2.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
